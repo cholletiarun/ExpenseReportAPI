@@ -131,8 +131,8 @@ output application/json
 ---
 {
   expenseRequestId: "ER100",
-  employeeName: "Arun",
-  employeeId: "DC100",
+  employeeName: "ArunKumar",
+  employeeId: "DC200",
   expenseStatus: "Submiited"
 }]]></ee:set-payload>
             </ee:message>
