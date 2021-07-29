@@ -1,0 +1,35 @@
+#%RAML 1.0
+
+types:
+  requesttype:
+    type: !include exchange_modules/cd25dd98-5ddf-4ad9-b1eb-d85cf434905e/createexpenserequestschema/0.0.9/createexpenserequestschema.raml
+    example: !include exchange_modules/cd25dd98-5ddf-4ad9-b1eb-d85cf434905e/createexpenserequestexample/0.0.3/createexpenserequestexample.raml
+
+  responsetype:
+    type: !include exchange_modules/cd25dd98-5ddf-4ad9-b1eb-d85cf434905e/createexpenseresponseschema/0.0.4/createexpenseresponseschema.raml
+    example: !include exchange_modules/cd25dd98-5ddf-4ad9-b1eb-d85cf434905e/createexpenseresponseexample/0.0.1/createexpenseresponseexample.raml
+
+
+title:  Expense Report API
+version : v0
+description: API to create sales Order in ERP
+
+protocols:
+  - HTTP
+
+
+uses:
+  traitslibrary: /exchange_modules/cd25dd98-5ddf-4ad9-b1eb-d85cf434905e/mytraits/0.0.3/mytraits.raml
+
+/create:
+  post:
+    description: POST method to create expense report in R12
+    is: [traitslibrary.common-headers,traitslibrary.client-credentials]
+    body:
+      application/json:
+        type: requesttype
+    responses:
+      201:
+        body:
+          application/json:
+            type: responsetype

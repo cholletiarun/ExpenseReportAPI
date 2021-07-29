@@ -1,0 +1,31 @@
+{
+  "configs": [
+    "expensereportapi.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:expensereportapi2:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.3.0",
+  "requiredProduct": "MULE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "log4j2.xml",
+        "expensereportapi.xml",
+        "api/exchange_modules/cd25dd98-5ddf-4ad9-b1eb-d85cf434905e/mytraits/0.0.3/mytraits.raml",
+        "api/exchange_modules/cd25dd98-5ddf-4ad9-b1eb-d85cf434905e/createexpenserequestschema/0.0.9/createexpenserequestschema.raml",
+        "api/exchange_modules/cd25dd98-5ddf-4ad9-b1eb-d85cf434905e/createexpenseresponseexample/0.0.1/createexpenseresponseexample.raml",
+        "api/exchange_modules/cd25dd98-5ddf-4ad9-b1eb-d85cf434905e/createexpenseresponseschema/0.0.4/createexpenseresponseschema.raml",
+        "api/exchange_modules/cd25dd98-5ddf-4ad9-b1eb-d85cf434905e/createexpenserequestexample/0.0.3/createexpenserequestexample.raml",
+        "api/.designer.json",
+        "api/expensereportapi.raml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}
