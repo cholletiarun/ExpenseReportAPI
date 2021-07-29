@@ -30,6 +30,21 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+					<cloudHubDeployment>
+     				<uri>https://anypoint.mulesoft.com</uri>
+      				<muleVersion>${app.runtime}</muleVersion>
+      				<username>${anypoint.username}</username>
+      				<password>${anypoint.password}</password>
+      				<applicationName>${cloudhub.application.name}</applicationName>
+      				<environment>${environment}</environment>
+      				<region>${anypoint.region}</region>
+      				<workers>${workers}</workers>
+      				<workerType>${workerType}</workerType>
+      				<objectStoreV2>true</objectStoreV2>
+      				<properties>
+        			<key>value</key>
+      				</properties>
+    				</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -80,6 +95,10 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
+          <pluginRepository>
+    <id>mule-public</id>
+    <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+  </pluginRepository>
     </pluginRepositories>
 
 </project>
