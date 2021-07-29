@@ -1,0 +1,34 @@
+#%RAML 1.0 DataType
+
+properties:
+  employeeName: 
+    type: string
+    required: true
+  employeeId:
+    type: string
+    required: true
+  employeeOriginalCountry:
+    type: string
+    required: true
+  expenseType:
+    type: string
+    enum: [Food,Travel]
+  expenseDetails:
+    type: array
+    required: true
+    minItems: 1
+    items:
+      properties:
+        expeseItem:
+          type: string
+          required: true
+        price:
+          type: number
+          required: true
+          multipleOf: 0.01
+        expenseDate:
+          type: date-only
+          required: true
+  expenseAppliedDate:
+    type: date-only
+    required: true
